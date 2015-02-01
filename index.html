@@ -10,13 +10,26 @@
 
   <h2>ASA client JS - Example 1</h2>
 
-  <h4>Code:</h4>
+  <h4>Purpose:</h4>
+  This is your first ASA request. <br/>
+  
+  It requests at most 2 customer items with customer_id smaller than 4 from service app 
+  <a href="http://tianjiasun.github.io/ASA_website/get_started.html" target="_blank">'CustomerDataReadWrite'</a> 
+  via ASA. <br/>
+  
+  See <a href="https://github.com/gausian-developers/asa-client-js" target="_blank">'asa-client.js'</a> 
+  to know how the ASA request is sent to <a href="http://tianjiasun.github.io/ASA_website/index.html" target="_blank">asa.gausian.com</a><br/>
+
+  This page finally displays 'customer.customer_id' and 'customer.company_name' in Results.
+
+  <h4>ASA Code:</h4>
   ASA.request('GET:customer_id,company_name;ON:customer_id<[4];LIMIT:2;@CustomerDataReadWrite', callback);
 
   <h4>Results:</h4>
   <ul id="customer_list">
 
   </ul>
+  Note: All data used in development stage are dummy.
 
   <script type="text/javascript">
 
